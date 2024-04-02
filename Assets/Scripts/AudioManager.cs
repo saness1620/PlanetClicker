@@ -2,17 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    [Header("Audio Clips")]
     [SerializeField] private AudioClip _buttonClickSFX;
     [SerializeField] private AudioClip _LockOfMoneySFX;
-    [SerializeField] private AudioSource _sfxSource;
-    [SerializeField] private AudioSource _musicSource;
-    [SerializeField] private Slider _sfxSlider;
 
-    private AudioSource _audioSource;
+    [Header("Audio Sources")]
+    [SerializeField] private AudioSource _soundAudioSource;
+    [SerializeField] private AudioSource _musicAudioSource;
 
     public static AudioManager Instance {get; private set; }
 
@@ -23,16 +22,16 @@ public class AudioManager : MonoBehaviour
 
     public void PlayButtonClickSound()
     {
-        _audioSource.PlayOneShot(_buttonClickSFX);
+        _soundAudioSource.PlayOneShot(_buttonClickSFX);
     }
 
     public void PlayLockOfMoneySound()
     {
-        _audioSource.PlayOneShot(_LockOfMoneySFX);
+        _soundAudioSource.PlayOneShot(_LockOfMoneySFX);
     }
 
-    public void SetVolumeSfx(float value)
+    public void SetSoundVolume(float value)
     {
-        _sfxSource.volume = value;
+        _soundAudioSource.volume = value;
     }
 }
