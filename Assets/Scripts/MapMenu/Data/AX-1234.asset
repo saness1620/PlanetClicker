@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e86a19a555fc649a0cc8c03ce16222, type: 3}
+  m_Name: AX-1234
+  m_EditorClassIdentifier: 
+  Name: AX-1234
+  Description: bokwrdvp0wiokf0pWIEJ )I(FjW) J#r0f82 3wj08fu32w0 9jwdfowjofij woif3j
+  Cost: 150
+  Icon: {fileID: 21300000, guid: 1985e43d46a47254c933422c8869f0da, type: 3}

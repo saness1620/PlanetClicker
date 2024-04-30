@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -33,5 +34,15 @@ public class AudioManager : MonoBehaviour
     public void SetSoundVolume(float value)
     {
         _soundAudioSource.volume = value;
+    }
+
+    public void SetMusicVolume(float value)
+    {
+        _musicAudioSource.volume = value;
+    }
+
+    public void SwitchAudioEnabling(bool value)
+    {
+        AudioListener.pause = !value;
     }
 }

@@ -9,7 +9,7 @@ public class MoneyManager : MonoBehaviour
 
     public int Money { get; private set; } = 0;
     public int MoneyPerTick { get; private set; } = 0;
-    public int MoneyPerClick { get; private set; } = 1;
+    public int MoneyPerClick { get; private set; } = 100;
 
     private WaitForSeconds _incomeInterval;
 
@@ -76,5 +76,11 @@ public class MoneyManager : MonoBehaviour
 
         MoneyPerClick += data.BonusMoneyPerClick;
         MoneyPerTick += data.BonusMoneyPerTick;
+    }
+
+    public void BuyPlanet(PlanetData data)
+    {
+        Money -= data.Cost;
+        MoneyChanged?.Invoke(Money);
     }
 }
